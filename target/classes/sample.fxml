@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="791.000199999995" prefWidth="1100.9999000000025" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.FXMLDocumentController">
+  <children>
+    <Label fx:id="label" layoutX="126.0" layoutY="120.0" minHeight="16.0" minWidth="69.0" />
+    <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="225.0" prefWidth="1101.0">
+      <children>
+        <CheckBox fx:id="sNumCheck" layoutX="34.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleButtonAction" text="学号" />
+        <CheckBox fx:id="nameCheck" layoutX="34.0" layoutY="81.0" mnemonicParsing="false" onAction="#handleButtonAction" text="姓名" />
+        <CheckBox fx:id="ageCheck" layoutX="34.0" layoutY="139.0" mnemonicParsing="false" onAction="#handleButtonAction" text="年龄  自" />
+        <CheckBox fx:id="sexCheck" layoutX="34.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleButtonAction" text="性别" />
+        <CheckBox fx:id="classCheck" layoutX="465.0" layoutY="31.0" mnemonicParsing="false" onAction="#handleButtonAction" text="班级" />
+        <CheckBox fx:id="deptCheck" layoutX="465.0" layoutY="106.0" mnemonicParsing="false" onAction="#handleButtonAction" text="系别" />
+        <CheckBox fx:id="addressCheck" layoutX="465.0" layoutY="177.0" mnemonicParsing="false" onAction="#handleButtonAction" text="地址" />
+        <TextField fx:id="name" layoutX="129.0" layoutY="75.0" onAction="#handleButtonAction" prefWidth="200.0" />
+        <TextField fx:id="sNum" layoutX="129.0" layoutY="28.0" onAction="#handleButtonAction" prefWidth="200.0" />
+        <TextField fx:id="ageFrom" layoutX="133.0" layoutY="136.0" onAction="#handleButtonAction" prefWidth="75.0" />
+        <TextField fx:id="sex" layoutX="129.0" layoutY="187.0" onAction="#handleButtonAction" prefWidth="200.0" />
+        <TextField id="class" fx:id="classId" layoutX="602.0" layoutY="28.0" onAction="#handleButtonAction" prefWidth="200.0" />
+        <TextField fx:id="dept" layoutX="602.0" layoutY="106.0" onAction="#handleButtonAction" prefWidth="200.0" />
+        <TextField fx:id="address" layoutX="602.0" layoutY="174.0" onAction="#handleButtonAction" prefWidth="200.0" />
+        <Text layoutX="222.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="到" />
+        <TextField fx:id="ageTo" layoutX="251.0" layoutY="136.0" onAction="#handleButtonAction" prefWidth="78.0" />
+        <Button fx:id="startQuery" layoutX="915.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleButtonAction" text="开始查询" />
+        <Button id="startQuery" fx:id="insertRecord" layoutX="915.0" layoutY="105.0" mnemonicParsing="false" onAction="#handleButtonAction" text="插入记录" />
+        <Button id="startQuery" fx:id="deleteRecord" layoutX="915.0" layoutY="150.0" mnemonicParsing="false" onAction="#handleButtonAction" text="删除记录" />
+      </children>
+    </AnchorPane>
+    <AnchorPane fx:id="sqlstatement" layoutX="0.0" layoutY="225.0" prefHeight="164.0" prefWidth="1101.0">
+      <children>
+        <TextArea fx:id="sqlStatement" prefHeight="164.0" prefWidth="1101.0" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane layoutX="0.0" layoutY="389.0" prefHeight="402.00018310546875" prefWidth="1101.0">
+      <children>
+        <TableView fx:id="resultTable" prefHeight="403.0" prefWidth="1101.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <columns>
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditCommit="#updataInfo" prefWidth="167.0" text="Sid" fx:id="Sid" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditCommit="#updataInfo" prefWidth="98.0" text="Sname" fx:id="Sname" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditCommit="#updataInfo" prefWidth="86.0" text="Sage" fx:id="Sage" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditCommit="#updataInfo" prefWidth="75.0" text="Ssex" fx:id="Ssex" />
+            <TableColumn maxWidth="5000.0" minWidth="0.0" onEditCommit="#updataInfo" prefWidth="182.0" text="Sclass" fx:id="Sclass" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditCommit="#updataInfo" prefWidth="242.0" text="Sdept" fx:id="Sdept" />
+            <TableColumn maxWidth="5000.0" minWidth="10.0" onEditCommit="#updataInfo" prefWidth="249.0" text="Saddress" fx:id="Saddress" />
+          </columns>
+        </TableView>
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
